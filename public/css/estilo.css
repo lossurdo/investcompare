@@ -1,0 +1,12 @@
+.input-field input {
+    color: white;
+}
+h6 {
+    font-size: 9pt;
+}
+table.conversao .input-field {
+    color: #fff;    
+}
+table.conversao input {
+    border-bottom: 1px solid #fff;
+}
