@@ -1,7 +1,10 @@
-# investcompare
-Comparador web de investimentos em Renda Fixa
+### Comparador web de investimentos em Renda Fixa
 
-Ajuda a decidir qual investimento está valendo mais a pena. Ainda em versão BETA e com algumas funcionalidades não implementadas.
+Ajuda a decidir qual investimento está valendo mais a pena. Ainda em **versão BETA** e com algumas funcionalidades não implementadas.
+
+![alt text](https://raw.githubusercontent.com/lossurdo/investcompare/master/investcompare-screenshot.png "investcompare-screenshot")
+
+### Utilização via Docker:
 
 ```shell
 $ docker pull lossurdo/investcompare
@@ -13,7 +16,7 @@ Acessar http://localhost:9000.
 Fique a vontade para contribuir.
 
 -----
-Também é possível clonar o projeto e executá-lo localmente da seguinte forma:
+Também é possível **clonar o projeto e executá-lo localmente** da seguinte forma:
 
 ```shell
 $ git clone https://github.com/lossurdo/investcompare.git
