@@ -8,11 +8,11 @@ app.use('/node_modules', express.static('node_modules'));
 
 app.get('/indices/selic', function (req, res) {
 
-    request('https://carteirarica.com.br/taxa-selic/', function (error, response, body) {
+    request('https://www.melhorcambio.com/taxa-selic', function (error, response, body) {
         console.log('statusCode:', response && response.statusCode);
-        const $ = cheerio.load(body);
-        var v = $("#anualizada").text();
-        res.send(v.replace(',','.'));
+        const $ = cheerio.load(body);        
+        var v = $("#snipet-div > table > tbody > tr:nth-child(4) > td.tdvalor").text();
+        res.send(v.replace(',','.').replace('%',''));
     });
 
 });
@@ -30,10 +30,10 @@ app.get('/indices/ipca', function (req, res) {
 
 app.get('/indices/cdi', function (req, res) {
 
-    request('https://carteirarica.com.br/cdi-taxa/', function (error, response, body) {
+    request('https://www.melhorcambio.com/taxa-selic', function (error, response, body) {
         console.log('statusCode:', response && response.statusCode);
-        const $ = cheerio.load(body);                
-        var v = $("#encasulador > div:nth-child(2) > ul > li.price > span").text();
+        const $ = cheerio.load(body);        
+        var v = $("#snipet-div > table > tbody > tr:nth-child(4) > td.tdvalor").text();
         res.send(v.replace(',','.').replace('%',''));
     });
 
