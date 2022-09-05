@@ -53,6 +53,11 @@ app.controller("myController", function($scope, $http) {
             //console.log(response.data);
             $scope.indices.ipca = response.data;
         });
+
+        $http.get('/indices/poupanca').then(function(response) {
+            //console.log(response.data);
+            $scope.indices.poupanca = response.data;
+        });
     }
 
     //=pow(B4+1;1/252)-1

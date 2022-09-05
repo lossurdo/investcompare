@@ -1,6 +1,6 @@
 {
   "name": "investcompare",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Comparador de investimentos em Renda Fixa",
   "main": "index.js",
   "author": "Rafael Lossurdo",

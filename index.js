@@ -19,10 +19,21 @@ app.get('/indices/selic', function (req, res) {
 
 app.get('/indices/ipca', function (req, res) {
 
-    request('http://www.portalbrasil.net/ipca.htm', function (error, response, body) {
+    request('https://www.portalbrasil.net/ipca/', function (error, response, body) {
         console.log('statusCode:', response && response.statusCode);
         const $ = cheerio.load(body);
-        var v = $("body > div > div:nth-child(9) > table > tbody > tr > td > div > table > tbody > tr:nth-child(2) > td:nth-child(4) > p > font").text();
+        var v = $(".fd17 > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(3) > tr:nth-child(1) > td:nth-child(4)").text();
+        res.send(v.replace(',','.'));
+    });
+
+});
+
+app.get('/indices/poupanca', function (req, res) {
+
+    request('https://www.portalbrasil.net/rendimentos-da-caderneta-de-poupanca-mensal-2022/', function (error, response, body) {
+        console.log('statusCode:', response && response.statusCode);
+        const $ = cheerio.load(body);
+        var v = $("#tb > tbody:nth-child(3) > tr:nth-child(1) > td:nth-child(2)").text();
         res.send(v.replace(',','.'));
     });
 
@@ -38,9 +49,6 @@ app.get('/indices/cdi', function (req, res) {
     });
 
 });
-
-
-
 
 const _PORT = 9000;
 app.listen(_PORT, function () {
