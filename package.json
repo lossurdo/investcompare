@@ -1,15 +1,20 @@
 {
-  "name": "investcompare",
-  "version": "0.3.0",
-  "description": "Comparador de investimentos em Renda Fixa",
-  "main": "index.js",
-  "author": "Rafael Lossurdo",
-  "license": "MIT",
-  "dependencies": {
-    "angular": "^1.7.2",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
-    "materialize-css": "^1.0.0",
-    "request": "^2.88.2"
-  }
+    "name": "investcompare",
+    "version": "0.4.0",
+    "description": "Comparador de investimentos em Renda Fixa",
+    "main": "index.js",
+    "scripts":
+    {
+        "start": "node index.js"
+    },
+    "author": "Rafael Lossurdo",
+    "license": "MIT",
+    "dependencies":
+    {
+        "angular": "^1.7.2",
+        "cheerio": "^1.0.0-rc.2",
+        "express": "^4.16.3",
+        "materialize-css": "^1.0.0",
+        "request": "^2.88.2"
+    }
 }
